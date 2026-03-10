@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════
+   TREE.CSS
+   ═══════════════════════════════════════════ */
+
+.tree-canvas-wrap {
+  padding: 0;
+  overflow: hidden;
+  height: 400px;
+}
+
+#treeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+.tree-input-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tree-input-row input[type="number"],
+.tree-input-row input[type="text"] {
+  padding: 8px 12px;
+  width: 120px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  outline: none;
+}
+.tree-input-row input:focus {
+  border-color: var(--accent);
+}

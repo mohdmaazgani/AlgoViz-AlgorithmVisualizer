@@ -1,0 +1,97 @@
+/* ═══════════════════════════════════════════
+   SORTING.CSS
+   ═══════════════════════════════════════════ */
+
+.bar-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  height: 280px;
+  padding: 10px 0;
+}
+
+.bar {
+  flex: 1;
+  min-width: 4px;
+  max-width: 40px;
+  border-radius: 3px 3px 0 0;
+  background: var(--bar-default, #3a3a50);
+  transition:
+    height 0.08s ease,
+    background-color 0.08s ease;
+  position: relative;
+  cursor: default;
+}
+.bar:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+[data-theme="dark"] .bar {
+  background: #2e2e42;
+}
+[data-theme="light"] .bar {
+  background: #c8c8dc;
+}
+
+.bar.compare {
+  background: var(--compare) !important;
+}
+.bar.active {
+  background: var(--highlight) !important;
+}
+.bar.pivot {
+  background: var(--pivot) !important;
+}
+.bar.sorted {
+  background: var(--sorted) !important;
+}
+.bar.selected {
+  background: var(--accent) !important;
+}
+
+/* Radix/bucket color bucket */
+.bar.bucket-0 {
+  background: #ef476f !important;
+}
+.bar.bucket-1 {
+  background: #ffd166 !important;
+}
+.bar.bucket-2 {
+  background: #06d6a0 !important;
+}
+.bar.bucket-3 {
+  background: #118ab2 !important;
+}
+.bar.bucket-4 {
+  background: #845ec2 !important;
+}
+.bar.bucket-5 {
+  background: #ff6b35 !important;
+}
+.bar.bucket-6 {
+  background: #00e5a0 !important;
+}
+.bar.bucket-7 {
+  background: #e040fb !important;
+}
+.bar.bucket-8 {
+  background: #40c4ff !important;
+}
+.bar.bucket-9 {
+  background: #ffab40 !important;
+}

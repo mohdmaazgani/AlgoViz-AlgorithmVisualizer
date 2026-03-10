@@ -1,0 +1,60 @@
+/* ═══════════════════════════════════════════
+   SEARCHING.CSS
+   ═══════════════════════════════════════════ */
+
+.search-bars {
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.search-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-bar-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+.search-bar-val {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.search-bar-item .bar {
+  min-width: 28px;
+  max-width: 28px;
+}
+.search-bar-item .bar.found {
+  background: var(--accent) !important;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+.search-bar-item .bar.current {
+  background: var(--highlight) !important;
+}
+.search-bar-item .bar.range {
+  background: var(--compare) !important;
+}
+.search-bar-item .bar.eliminated {
+  background: var(--text-muted) !important;
+  opacity: 0.3;
+}
+
+.search-stats {
+  display: flex;
+  gap: 18px;
+  padding: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.search-stats span {
+  color: var(--accent);
+  font-weight: 700;
+}

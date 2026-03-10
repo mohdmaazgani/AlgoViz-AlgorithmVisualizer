@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════
+   BACKTRACKING.CSS
+   ═══════════════════════════════════════════ */
+
+.backtrack-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-size: 0.8rem;
+}
+.backtrack-options label {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+.backtrack-options input[type="number"],
+.backtrack-options select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  outline: none;
+  width: 70px;
+}
+.backtrack-options select {
+  width: auto;
+}
+
+/* ── N-Queens Board ── */
+.queens-board {
+  display: inline-grid;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 0;
+  margin: 0 auto;
+}
+.queens-cell {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: background 0.15s;
+}
+.queens-cell.light {
+  background: #e8e8f0;
+}
+.queens-cell.dark {
+  background: #6060a0;
+}
+[data-theme="dark"] .queens-cell.light {
+  background: #2a2a3c;
+}
+[data-theme="dark"] .queens-cell.dark {
+  background: #1a1a2a;
+}
+.queens-cell.queen {
+  background: var(--accent-dim);
+}
+.queens-cell.conflict {
+  background: var(--highlight-dim);
+}
+.queens-cell.trying {
+  background: var(--compare-dim);
+}
+
+/* ── Sudoku ── */
+.sudoku-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(9, 1fr);
+  border: 2px solid var(--text-primary);
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 0;
+}
+.sudoku-cell {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  transition: background 0.1s;
+}
+.sudoku-cell.given {
+  color: var(--text-primary);
+}
+.sudoku-cell.filled {
+  color: var(--accent);
+}
+.sudoku-cell.trying {
+  background: var(--compare-dim);
+  color: var(--compare);
+}
+.sudoku-cell.conflict {
+  background: var(--highlight-dim);
+  color: var(--highlight);
+}
+.sudoku-cell.box-border-right {
+  border-right: 2px solid var(--text-secondary);
+}
+.sudoku-cell.box-border-bottom {
+  border-bottom: 2px solid var(--text-secondary);
+}
+
+/* ── TSP ── */
+.tsp-canvas-wrap {
+  padding: 0;
+  height: 360px;
+}
+#tspCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: var(--radius-lg);
+}
